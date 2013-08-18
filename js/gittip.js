@@ -13,7 +13,7 @@
   }
 
   var gittipIconImg = '<img src="' + chrome.extension.getURL("/images/icon_016.png") +
-                      '" style="border-radius: 8px; margin-left: 3px; vertical-align: middle;">';
+                      '" style="margin-left: 3px; vertical-align: middle;">';
 
   var findUsers = function() {
     var users = _.filter($('a'), function(anchor) {
