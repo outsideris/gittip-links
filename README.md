@@ -15,3 +15,9 @@ Gittip-links show gittip icon(include a link) beside username on
 if the user has gittip account.
 
 You can download [Chrome Web Store](https://chrome.google.com/webstore/detail/oiepnjpngemgpdcfnikcmcgglciegfdm)
+
+## Screenshots
+
+![](https://raw.github.com/outsideris/gittip-links/master/docs/screenshots/screenshot1.jpg)
+
+![](https://raw.github.com/outsideris/gittip-links/master/docs/screenshots/screenshot2.jpg)
