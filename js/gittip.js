@@ -4,6 +4,14 @@
  * <http://outsider.mit-license.org/>
  */
 (function() {
+  // specify current site
+  var site = '';
+  if (location.host === "github.com") {
+    site = "github";
+  } else if (location.host === "bitbucket.org") {
+    site = "bitbucket";
+  }
+
   var gittipIconImg = '<img src="' + chrome.extension.getURL("/images/icon_016.png") +
                       '" style="border-radius: 8px; margin-left: 3px; vertical-align: middle;">';
 
@@ -13,12 +21,15 @@
         var matched = $(anchor).attr('href').match(/^\/(\w+)$/);
         if (matched && matched[1] === $(anchor).text()) {
           return true;
-        } else {
-          return false;
         }
-      } else {
-        return false;
+        if (matched && site === "bitbucket") {
+          if (matched[1] !== 'support' && matched[1] !== 'plans' &&
+              $(anchor).text() === 'View profile') {
+            return true;
+          }
+        }
       }
+      return false;
     });
 
     return users;
@@ -40,10 +51,10 @@
 
   var insertGittipIcon = function(users) {
     _.forEach(users, function(user) {
-      var userName = $(user).text();
-      checkOnGittip('https://www.gittip.com/on/github/' + userName + '/', function(exist) {
+      var userName = $(user).attr('href').match(/^\/(\w+)$/)[1];
+      checkOnGittip('https://www.gittip.com/on/' + site + '/' + userName + '/', function(exist) {
         if (exist) {
-          var gittipLink = $('<a href="http://www.gittip.com/on/github/' + userName +
+          var gittipLink = $('<a href="http://www.gittip.com/on/' + site + '/' + userName +
                              '/" target="_blank">' + gittipIconImg +'</a>');
           gittipLink.insertAfter(user);
         }

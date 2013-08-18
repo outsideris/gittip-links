@@ -7,15 +7,11 @@
     "16": "images/icon_016.png",
     "128": "images/icon_128.png"
   },
-  "background": {
-    "scripts": [
-      "js/background.js"
-    ]
-  },
   "content_scripts": [
     {
       "matches": [
-        "https://github.com/*"
+        "https://github.com/*",
+        "https://bitbucket.org/*"
       ],
       "js": [
         "components/jquery/jquery.min.js",
