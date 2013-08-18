@@ -13,3 +13,5 @@ So, I made this chrome extension.
 Gittip-links show gittip icon(include a link) beside username on
 [Github](https://github.com) and [Bitbucket](https://bitbucket.org/)
 if the user has gittip account.
+
+You can download [Chrome Web Store](https://chrome.google.com/webstore/detail/oiepnjpngemgpdcfnikcmcgglciegfdm)
