@@ -19,6 +19,7 @@
         "https://github.com/*"
       ],
       "js": [
+        "components/jquery.min.js"
       ],
       "css": [
       ]
