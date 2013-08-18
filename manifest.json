@@ -1,0 +1,27 @@
+{
+  "name": "gittip-links",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "show user has gittip account in Github, Twitter and Bitbucket",
+  "icons": {
+    "16": "images/icon-016.png",
+    "128": "images/icon-128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "scripts/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+      ],
+      "css": [
+      ]
+    }
+  ]
+}
