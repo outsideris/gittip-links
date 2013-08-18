@@ -18,7 +18,9 @@
   var findUsers = function() {
     var users = _.filter($('a'), function(anchor) {
       if ($(anchor).attr('href')) {
-        var matched = $(anchor).attr('href').match(/^\/(\w+)$/);
+        var matched = $(anchor).attr('href').replace("https://github.com", "")
+                                            .match(/^\/(\w+)$/);
+
         if (matched && matched[1] === $(anchor).text()) {
           return true;
         }
@@ -51,7 +53,7 @@
 
   var insertGittipIcon = function(users) {
     _.forEach(users, function(user) {
-      var userName = $(user).attr('href').match(/^\/(\w+)$/)[1];
+      var userName = $(user).attr('href').replace("https://github.com", "").match(/^\/(\w+)$/)[1];
       checkOnGittip('https://www.gittip.com/on/' + site + '/' + userName + '/', function(exist) {
         if (exist) {
           var gittipLink = $('<a href="http://www.gittip.com/on/' + site + '/' + userName +
