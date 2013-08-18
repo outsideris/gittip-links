@@ -14,5 +14,7 @@
   "browser": true,
   "jquery": true,
   "predef": [
+    "_",
+    "chrome"
   ]
 }

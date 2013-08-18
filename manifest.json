@@ -4,13 +4,12 @@
   "manifest_version": 2,
   "description": "show user has gittip account in Github, Twitter and Bitbucket",
   "icons": {
-    "16": "images/icon-016.png",
-    "128": "images/icon-128.png"
+    "16": "images/icon_016.png",
+    "128": "images/icon_128.png"
   },
-  "default_locale": "en",
   "background": {
     "scripts": [
-      "scripts/background.js"
+      "js/background.js"
     ]
   },
   "content_scripts": [
@@ -19,10 +18,18 @@
         "https://github.com/*"
       ],
       "js": [
-        "components/jquery.min.js"
+        "components/jquery/jquery.min.js",
+        "components/lodash/lodash.js",
+        "js/gittip.js"
       ],
       "css": [
       ]
     }
+  ],
+  "web_accessible_resources": [
+    "images/icon_016.png"
+  ],
+  "permissions": [
+    "https://www.gittip.com/"
   ]
 }

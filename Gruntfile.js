@@ -10,7 +10,7 @@ module.exports = function(grunt) {
         jshintrc: '.jshintrc'
       },
       front: {
-        src: ['Gruntfile.js']
+        src: ['Gruntfile.js', 'js/**/*.js']
       }
     }
   });
