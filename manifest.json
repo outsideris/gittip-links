@@ -1,8 +1,8 @@
 {
   "name": "Gittip Links",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "manifest_version": 2,
-  "description": "show user has gittip account in Github, Twitter and Bitbucket",
+  "description": "show user has gittip account in Github and Bitbucket",
   "icons": {
     "16": "images/icon_016.png",
     "128": "images/icon_128.png"
